@@ -1,0 +1,165 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: #e6f0ff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #eaf4fb;
+  border: 4px solid #233142;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header/Navbar */
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 60px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.nav a {
+  color: #3b3f58;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #0077ff;
+}
+
+.nav a.active-link {
+  text-decoration: underline;
+}
+
+/* Main Section */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 40px; /* was 60px */
+  background-color: #f1f6fb;
+  width: 100%;
+}
+
+/* About Card */
+.about-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  max-width: 1000px;
+  width: 100%;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-left {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about-right {
+  max-width: 600px;
+  color: #233142;
+}
+
+.about-right h1 {
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 16px;
+}
+
+.about-right h2 {
+  font-size: 24px;
+  color: #ff7f50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-right p {
+  font-size: 18px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .about-card {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .profile-photo {
+    width: 240px;
+    height: 240px;
+  }
+
+  .about-right h1 {
+    font-size: 28px;
+  }
+
+  .about-right h2 {
+    font-size: 20px;
+  }
+
+  .about-right p {
+    font-size: 16px;
+  }
+
+  .main {
+    padding: 30px 20px;
+  }
+
+  .header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    margin-top: 20px;
+    gap: 16px;
+  }
+}
+
+/* Active Link */
+.active-link {
+  text-decoration: underline;
+}
